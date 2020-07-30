@@ -1,0 +1,7 @@
+PKGNAME=flac+armhf
+PKGDES="FLAC analyzing library"
+PKGSEC=libs
+PKGDEP="libogg+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+
+ABHOST=noarch
