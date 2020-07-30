@@ -63,3 +63,4 @@ AUTOTOOLS_AFTER="--prefix=/opt/abcross/optenvarmhf \
                  --target=arm-aosc-linux-gnueabihf"
 
 RECONF=0
+NOSTATIC=no
