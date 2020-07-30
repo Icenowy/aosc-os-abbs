@@ -1,0 +1,23 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkgconfig:/opt/armhf/share/pkgconfig
+
+./configure --build=${ARCH_TARGET[$ARCH]} --host=arm-aosc-linux-gnueabihf --prefix=/opt/armhf --enable-shared --disable-static --disable-sqlite --localstatedir=/var \
+            --disable-tcpwrap \
+            --disable-bluez4 --disable-bluez5 \
+            --disable-default-build-tests \
+            --disable-avahi --disable-samplerate \
+            --disable-systemd --disable-systemd-journal \
+            --disable-systemd-daemon --disable-systemd-login \
+            --with-database=simple --without-fftw \
+            --disable-jack --enable-webrtc-aec=no \
+            --enable-orc=no --disable-gconf \
+            --without-soxr --without-speex \
+            --without-caps
+
+make
+make install DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/{bin,etc,share,lib/pulse*/modules}

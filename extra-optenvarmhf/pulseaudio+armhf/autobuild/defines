@@ -1,0 +1,6 @@
+PKGNAME=pulseaudio+armhf
+PKGSEC=sound
+PKGDEP="libtool+armhf libsndfile+armhf alsa-lib+armhf"
+PKGDES="A featureful, general-purpose sound server (optenvarmhf)"
+BUILDDEP="perl-xml-parser"
+ABHOST=noarch
