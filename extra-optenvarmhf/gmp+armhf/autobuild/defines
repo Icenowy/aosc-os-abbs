@@ -1,0 +1,7 @@
+PKGNAME=gmp+armhf
+PKGSEC=libs
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGDES="GNU Multiprecision library (optenvarmhf)"
+
+ABHOST=noarch
