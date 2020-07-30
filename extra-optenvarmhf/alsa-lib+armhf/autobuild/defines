@@ -1,6 +1,6 @@
 PKGNAME=alsa-lib+armhf
 PKGSEC=libs
 PKGDES="The ALSA interface library (optenvarmhf)"
-PKGDEP="glibc+32"
+PKGDEP="glibc+armhf"
 BUILDDEP="gcc+cross+optenvarmhf"
 ABHOST=noarch
