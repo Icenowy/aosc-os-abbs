@@ -1,0 +1,2 @@
+abinfo "Removing Texinfo index..."
+rm -v "$PKGDIR"/opt/armhf/share/info/dir
