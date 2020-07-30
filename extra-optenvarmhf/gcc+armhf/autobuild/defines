@@ -63,3 +63,4 @@ AUTOTOOLS_AFTER="--prefix=/opt/armhf \
 
 RECONF=0
 NOSTATIC=no
+ABHOST=noarch
