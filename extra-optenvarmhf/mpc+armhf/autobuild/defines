@@ -1,0 +1,5 @@
+PKGNAME=mpc+armhf
+PKGDES="MPC on armhfsubsystem"
+PKGSEC=libs
+PKGDEP="gmp+armhf glibc+armhf"
+ABHOST=noarch
