@@ -1,0 +1,6 @@
+PKGNAME=libsndfile+armhf
+PKGDES="A C library for reading and writing files containing sampled sound (optenvarmhf)"
+PKGDEP="alsa-lib+armhf flac+armhf libvorbis+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=libs
+ABHOST=noarch
