@@ -1,0 +1,6 @@
+PKGNAME=libogg+armhf
+PKGDES="Ogg analyzing library for optenvarmhf"
+PKGDEP=glibc+armhf
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=libs
+ABHOST=noarch
