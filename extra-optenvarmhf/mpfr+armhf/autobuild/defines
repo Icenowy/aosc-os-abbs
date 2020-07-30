@@ -1,0 +1,5 @@
+PKGNAME=mpfr+armhf
+PKGDES="Functions for multiple precision math (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="gmp+armhf glibc+armhf"
+ABHOST=noarch
