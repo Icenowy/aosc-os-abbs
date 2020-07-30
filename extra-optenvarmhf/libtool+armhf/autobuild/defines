@@ -1,0 +1,7 @@
+PKGNAME=libtool+armhf
+PKGDES="GNU generic library support script"
+PKGDEP="glibc+armhf"
+BUILDDEP="libtool gcc+cross+optenvarmhf"
+PKGSEC=devel
+NOLTO=yes
+ABHOST=noarch
