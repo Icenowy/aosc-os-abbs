@@ -1,0 +1,10 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+CC=arm-aosc-linux-gnueabihf-gcc CXX=arm-aosc-linux-gnueabihf-g++ \
+AS=arm-aosc-linux-gnueabihf-as LD=arm-aosc-linux-gnueabihf-ld AR=arm-aosc-linux-gnueabihf-ar \
+RANLIB=arm-aosc-linux-gnueabihf-ranlib ./configure --prefix=/opt/armhf
+make
+make DESTDIR=$PKGDIR install
+
+rm -rf $PKGDIR/opt/armhf/share
