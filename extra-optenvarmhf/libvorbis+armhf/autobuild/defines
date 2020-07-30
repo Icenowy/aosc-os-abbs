@@ -1,0 +1,7 @@
+PKGNAME=libvorbis+armhf
+PKGDES="Vorbis codec library (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="libogg+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
