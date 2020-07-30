@@ -1,0 +1,33 @@
+abinfo "Nutering fixinc.sh in gcc/Makefile ..."
+sed -i 's@\./fixinc\.sh@-c true@' "$SRCDIR"/gcc/Makefile.in
+
+abinfo 'Adjusting $CPPFLAGS ...'
+sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" "$SRCDIR"/{libiberty,gcc}/configure
+
+# You will see this in "gcc -v" output.
+# BASE-VER identifies the GCC version, please DO NOT EDIT.
+# * DEV-PHASE are used as branding identification, you may alter the line.
+abinfo "Appending AOSC versions to gcc -v ..."
+echo $PKGVER > "$SRCDIR"/gcc/BASE-VER
+echo 'AOSC OS, Optenvarmhf' > "$SRCDIR"/gcc/DEV-PHASE
+
+abinfo "Stripping pre-defined configure options ..."
+export AUTOTOOLS_DEF=""
+
+abinfo "Unsetting flags..."
+unset CFLAGS CXXFLAGS LDFLAGS CPPFLAGS
+
+abinfo "Setting PATH to ensure cross compiler can be found..."
+export PATH="/opt/abcross/optenvarmhf/bin:$PATH"
+
+export CC=arm-aosc-linux-gnueabihf-gcc
+export CXX=arm-aosc-linux-gnueabihf-g++
+export LD=arm-aosc-linux-gnueabihf-ld
+export AR=arm-aosc-linux-gnueabihf-ar
+export RANLIB=arm-aosc-linux-gnueabihf-ranlib
+
+export CC_FOR_BUILD=gcc
+export CXX_FOR_BUILD=g++
+export LD_FOR_BUILD=ld
+export AR_FOR_BUILD=ar
+export RANLIB_FOR_BUILD=ranlib
