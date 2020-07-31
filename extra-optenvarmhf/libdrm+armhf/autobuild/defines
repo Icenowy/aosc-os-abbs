@@ -1,0 +1,6 @@
+PKGNAME=libdrm+armhf
+PKGDES="Direct Rendering Manager runtime library (optenvarmhf)"
+PKGDEP="eudev+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=x11
+ABHOST=noarch
