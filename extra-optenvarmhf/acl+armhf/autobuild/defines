@@ -1,0 +1,7 @@
+PKGNAME=acl+armhf
+PKGDES="Access Control List for armhfSubsystem"
+PKGSEC=utils
+PKGDEP="attr+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
