@@ -1,0 +1,27 @@
+export INSTALL_USER=root INSTALL_GROUP=root
+
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+NOCONFIGURE=1 ./autogen.sh
+
+./configure --build=${ARCH_TARGET[$ARCH]} --host=arm-aosc-linux-gnueabihf --prefix=/opt/armhf --enable-shared --disable-static --sysconfdir=/etc --localstatedir=/var \
+            --with-rootprefix=/ \
+            --disable-introspection --disable-selinux \
+            --disable-keymap --disable-gtk-doc \
+            --disable-kmod \
+            --disable-manpages --enable-rule-generator \
+            --with-firmware-path=/usr/lib/firmware \
+
+
+make
+make install DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/etc
+rm -rf "$PKGDIR"/opt/armhf/{bin,sbin,lib/udev}
+
+mv "$PKGDIR"/opt/armhf/share/pkgconfig/udev.pc "$PKGDIR"/opt/armhf/lib/pkgconfig/udev.pc
+rm -rf "$PKGDIR"/opt/armhf/share
+
+ln -s libudev.so.1 "$PKGDIR"/opt/armhf/lib/libudev.so.0

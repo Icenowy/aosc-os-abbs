@@ -1,0 +1,7 @@
+PKGNAME=eudev+armhf
+PKGSEC=libs
+PKGDEP="acl+armhf hwdata util-linux+armhf"
+BUILDDEP="gcc+cross+optenvarmhf gperf"
+PKGDES="A stripped down version of UDev by Gentoo (optenvarmhf)"
+
+ABHOST=noarch
