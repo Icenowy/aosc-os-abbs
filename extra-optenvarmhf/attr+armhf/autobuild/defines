@@ -1,0 +1,7 @@
+PKGNAME=attr+armhf
+PKGDES="Attr for armhfSubsystem"
+PKGSEC=libs
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+
+ABHOST=noarch
