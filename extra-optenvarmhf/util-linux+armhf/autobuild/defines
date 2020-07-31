@@ -1,0 +1,7 @@
+PKGNAME=util-linux+armhf
+PKGSEC=utils
+PKGDES="Base utilities for Linux (optenvarmhf)"
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
