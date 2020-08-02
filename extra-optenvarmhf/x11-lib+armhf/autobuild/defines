@@ -1,0 +1,7 @@
+PKGNAME=x11-lib+armhf
+PKGSEC=x11
+PKGDES="X11R7 Libraries"
+PKGDEP="fontconfig+armhf libxcb+armhf x11-proto+armhf"
+# BUILDDEP="x11-lib+armhf gcc+cross+optenvarmhf"
+
+ABHOST=noarch
