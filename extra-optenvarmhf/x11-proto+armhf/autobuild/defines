@@ -1,0 +1,7 @@
+PKGNAME=x11-proto+armhf
+PKGSEC=x11
+PKGDES="X11R7 Protocols (optenvarmhf)"
+PKGDEP=""
+ABTYPE=meson
+MESON_AFTER="--prefix=/opt/armhf"
+ABHOST=noarch

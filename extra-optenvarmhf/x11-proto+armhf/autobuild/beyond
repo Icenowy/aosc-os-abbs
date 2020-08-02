@@ -1,0 +1,3 @@
+mkdir -pv "$PKGDIR"/opt/armhf/lib/
+mv -v "$PKGDIR"/opt/armhf/{share,lib}/pkgconfig
+rm -rv "$PKGDIR"/opt/armhf/share
