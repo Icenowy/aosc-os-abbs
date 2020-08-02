@@ -1,0 +1,6 @@
+PKGNAME=freetype+armhf
+PKGDES="A free and portable font rendering engine (optenvarmhf)"
+PKGDEP="libpng-1.6+armhf zlib+armhf bzip2+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=libs
+ABHOST=noarch
