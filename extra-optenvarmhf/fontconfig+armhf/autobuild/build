@@ -1,0 +1,27 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkgconfig:/opt/armhf/share/pkgconfig
+
+autoreconf -fi
+
+./configure --build=${ARCH_TARGET[$ARCH]} --host=arm-aosc-linux-gnueabihf --prefix=/opt/armhf --enable-shared --disable-static --disable-sqlite --disable-docs \
+            --with-default-fonts=/usr/share/fonts \
+            --sysconfdir=/etc \
+            --with-templatedir=/etc/fonts/conf.avail \
+            --with-xmldir=/etc/fonts --localstatedir=/var
+
+make
+make install DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/{share,var,etc}
+rm -rf "$PKGDIR"/etc
+rm -rf "$PKGDIR"/var
+
+for i in "$PKGDIR"/opt/armhf/bin/*; do
+    mv $i ${i}-armhf
+done
+
+sed -e 's|-I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include||g' \
+    -i "$PKGDIR"/opt/armhf/lib/pkgconfig/*.pc

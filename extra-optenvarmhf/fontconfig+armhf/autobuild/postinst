@@ -1,0 +1,2 @@
+echo "Generating fontconfig cache (optenvarmhf) ..."
+/opt/armhf/bin/fc-cache-armhf -s
