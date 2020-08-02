@@ -1,0 +1,10 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+./configure --build=${ARCH_TARGET[$ARCH]} --host=arm-aosc-linux-gnueabihf --prefix=/opt/armhf --enable-shared --disable-static
+
+make
+make install DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/share

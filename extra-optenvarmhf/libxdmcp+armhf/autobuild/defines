@@ -1,0 +1,7 @@
+PKGNAME=libxdmcp+armhf
+PKGDES="LibXdmcp on armhfsubsystem"
+PKGSEC=libs
+PKGDEP="glibc+armhf x11-proto+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+
+ABHOST=noarch
