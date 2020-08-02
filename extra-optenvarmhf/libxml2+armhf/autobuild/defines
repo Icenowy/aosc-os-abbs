@@ -1,0 +1,7 @@
+PKGNAME=libxml2+armhf
+PKGDES="LibXML2 on armhfsubsystem"
+PKGSEC=libs
+PKGDEP="glibc+armhf zlib+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+RECONF=no
+ABHOST=noarch
