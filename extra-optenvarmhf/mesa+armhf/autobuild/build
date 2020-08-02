@@ -1,0 +1,41 @@
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkgconfig
+
+mkdir "$SRCDIR"/build
+cd "$SRCDIR"/build
+meson "$SRCDIR" --prefix=/opt/armhf \
+      -Ddri-drivers-path=/opt/armhf/lib/xorg/modules/dri \
+      -Db_ndebug=true \
+      -Dplatforms=x11,drm,surfaceless \
+      -Dvulkan-overlay-layer=false \
+      -Ddri3=true \
+      -Degl=true \
+      -Dgallium-extra-hud=true \
+      -Dgallium-nine=false \
+      -Dgallium-va=false \
+      -Dgallium-vdpau=false \
+      -Dgallium-xa=false \
+      -Dgallium-xvmc=false \
+      -Dgbm=true \
+      -Dgles1=true \
+      -Dgles2=true \
+      -Dglvnd=false \
+      -Dglx=dri \
+      -Dllvm=false \
+      -Dlmsensors=false \
+      -Dosmesa=gallium \
+      -Dshared-glapi=true \
+      -Dvalgrind=false \
+      -Db_lto=false \
+      -Ddri-drivers=r100,r200,nouveau \
+      -Dgallium-drivers=freedreno,tegra,vc4,r300,r600,nouveau,virgl,lima,kmsro,swrast,panfrost \
+      -Dvulkan-drivers="" --cross-file ../autobuild/meson-cross
+ninja
+DESTDIR="$PKGDIR" ninja install
+
+cd "$SRCDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/etc

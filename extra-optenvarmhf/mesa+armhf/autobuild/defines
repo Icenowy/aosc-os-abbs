@@ -1,0 +1,7 @@
+PKGNAME=mesa+armhf
+PKGDES="MesaLib - a OpenGL implementation (optenvarmhf)"
+PKGDEP="libdrm+armhf expat+armhf eudev+armhf x11-lib+armhf"
+BUILDDEP="gcc+cross+optenvarmhf mako"
+PKGSEC=x11
+
+ABHOST=noarch
