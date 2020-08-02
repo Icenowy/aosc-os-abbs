@@ -1,0 +1,6 @@
+PKGNAME=bzip2+armhf
+PKGSEC=utils
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGDES="BZip2 for armhfsubsystem"
+ABHOST=noarch

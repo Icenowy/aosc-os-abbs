@@ -1,0 +1,17 @@
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+export CC=arm-aosc-linux-gnueabihf-gcc
+export CXX=$CC
+
+unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
+
+make -f Makefile-libbz2_so CC="$CC" CXX="$CXX"
+
+install -dvm755 "$PKGDIR"/opt/armhf/{lib,include}
+
+install -vm755 libbz2.so.$PKGVER "$PKGDIR"/opt/armhf/lib
+ln -sv libbz2.so.$PKGVER "$PKGDIR"/opt/armhf/lib/libbz2.so
+ln -sv libbz2.so.$PKGVER "$PKGDIR"/opt/armhf/lib/libbz2.so.1
+ln -sv libbz2.so.$PKGVER "$PKGDIR"/opt/armhf/lib/libbz2.so.1.0
+
+install -vm644 bzlib.h "$PKGDIR"/opt/armhf/include/
+
