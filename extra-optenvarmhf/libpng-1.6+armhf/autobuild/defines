@@ -1,0 +1,7 @@
+PKGNAME=libpng-1.6+armhf
+PKGDES="Libraries used by other programs for reading and writing PNG files (optenvarmhf)"
+PKGDEP="zlib+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=libs
+
+ABHOST=noarch
