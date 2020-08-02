@@ -1,0 +1,8 @@
+PKGNAME=libxcb+armhf
+PKGDES="XCB library (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="glibc+armhf xcb-proto+armhf libxau+armhf libxdmcp+armhf libxslt+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+
+NOLTO=yes
+ABHOST=noarch
