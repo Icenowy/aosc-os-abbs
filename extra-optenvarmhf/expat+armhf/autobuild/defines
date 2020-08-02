@@ -1,0 +1,7 @@
+PKGNAME=expat+armhf
+PKGDES="A stream oriented C library for parsing XML (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
