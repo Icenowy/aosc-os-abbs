@@ -1,0 +1,6 @@
+PKGNAME=libxslt+armhf
+PKGDES="Extensible Stylesheet Language Transformations(XSLT) C library developed for the GNOME project on armhfsubsystem"
+PKGSEC=libs
+PKGDEP="glibc+armhf libxml2+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+ABHOST=noarch
