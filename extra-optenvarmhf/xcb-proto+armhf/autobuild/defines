@@ -1,0 +1,5 @@
+PKGNAME=xcb-proto+armhf
+PKGDES="XCB protocol on armhfsubsystem"
+PKGSEC=libs
+PKGDEP="xcb-proto python-2"
+ABHOST=noarch

@@ -1,0 +1,11 @@
+prefix=/opt/32
+exec_prefix=/opt/32
+datarootdir=/usr/share
+datadir=${datarootdir}
+libdir=/opt/32/lib
+xcbincludedir=${datadir}/xcb
+pythondir=/usr/lib/python2.7/site-packages
+
+Name: XCB Proto
+Description: X protocol descriptions for XCB
+Version: @VER@

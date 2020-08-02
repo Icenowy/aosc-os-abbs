@@ -1,0 +1,2 @@
+mkdir -p "$PKGDIR"/opt/armhf/lib/pkgconfig
+sed "s/@VER@/${PKGVER}/" < "$SRCDIR"/autobuild/xcb-proto.pc.in > "$PKGDIR"/opt/armhf/lib/pkgconfig/xcb-proto.pc
