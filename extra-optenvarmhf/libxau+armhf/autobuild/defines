@@ -1,0 +1,6 @@
+PKGNAME=libxau+armhf
+PKGDES="LibXau on armhfsubsystem"
+PKGSEC=libs
+PKGDEP="glibc+armhf x11-proto+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+ABHOST=noarch
