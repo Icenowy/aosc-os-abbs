@@ -35,3 +35,5 @@ rm -rf "$PKGDIR"/etc
 mkdir -pv "$PKGDIR"/opt/armhf/lib/pkgconfig
 mv -v "$PKGDIR"/opt/armhf/share/pkgconfig/* "$PKGDIR"/opt/armhf/lib/pkgconfig/
 rm -rf "$PKGDIR"/opt/armhf/{bin,share}
+mkdir -pv "$PKGDIR"/opt/armhf/share
+ln -sfv /usr/share/X11 "$PKGDIR"/opt/armhf/share/
