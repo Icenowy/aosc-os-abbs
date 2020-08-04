@@ -1,0 +1,6 @@
+PKGNAME=libdbusmenu+armhf
+PKGDES="DBus menu protocol for GTK+ (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="gtk-2+armhf"
+BUILDDEP="intltool gcc+cross+optenvarmhf"
+ABHOST=noarch

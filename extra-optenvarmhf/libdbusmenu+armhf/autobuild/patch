@@ -1,0 +1,4 @@
+for i in libdbusmenu-*/Makefile.*
+do
+sed -i 's/-Werror//g' $i
+done
