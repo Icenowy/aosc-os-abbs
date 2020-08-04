@@ -1,0 +1,6 @@
+PKGNAME=libffi+armhf
+PKGSEC=libs
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGDES="Portable foreign function interface library for the armhfsubsystem"
+ABHOST=noarch
