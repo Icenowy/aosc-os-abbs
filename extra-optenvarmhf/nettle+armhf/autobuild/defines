@@ -1,0 +1,8 @@
+PKGNAME=nettle+armhf
+PKGDES="Nettle on armhfsubsystem"
+PKGSEC=libs
+PKGDEP="gmp+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+
+NOLTO=yes
+ABHOST=noarch
