@@ -1,0 +1,7 @@
+PKGNAME=openal-soft+armhf
+PKGSEC=libs
+PKGDEP="glibc+armhf"
+PKGDES="A cross platform 3D audio library (optenvarmhf)"
+
+NOLTO=yes
+ABHOST=noarch

@@ -1,0 +1,16 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkg-config
+
+cmake . -DCMAKE_INSTALL_PREFIX=/opt/armhf -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_TOOLCHAIN_FILE=autobuild/armhf.cmake \
+        -DALSOFT_BACKEND_PORTAUDIO=OFF -DALSOFT_NO_CONFIG_UTIL=ON \
+        -DALSOFT_EXAMPLES=OFF -DALSOFT_BACKEND_JACK=OFF -DALSOFT_BACKEND_SNDIO=OFF \
+        -DALSA_INCLUDE_DIR=/opt/armhf/include -DPULSEAUDIO_INCLUDE_DIR=/opt/armhf/include \
+        -DOSS_INCLUDE_DIR=/opt/armhf/include
+
+make
+make install DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/{bin,share}
