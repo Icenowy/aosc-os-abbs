@@ -1,0 +1,8 @@
+PKGNAME=fribidi+armhf
+PKGSEC=libs
+PKGDEP="glib+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGDES="Free implementation of BiDi algorithm (optenvarmhf)"
+
+NOPARALLEL=yes
+ABHOST=noarch
