@@ -1,0 +1,7 @@
+PKGNAME=networkmanager+armhf
+PKGSEC=libs
+PKGDEP="dbus-glib+armhf gnutls+armhf"
+BUILDDEP="intltool gcc+cross+optenvarmhf"
+PKGDES="Libraries for NetworkManager (optenvarmhf)"
+
+ABHOST=noarch

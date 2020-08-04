@@ -1,0 +1,15 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkgconfig:/opt/armhf/share/pkgconfig
+
+export CC=arm-aosc-linux-gnueabihf-gcc
+export CXX=arm-aosc-linux-gnueabihf-g++
+
+./configure --build=${ARCH_TARGET[$ARCH]} --host=arm-aosc-linux-gnueabihf --prefix=/opt/armhf --enable-shared --disable-static --with-crypto=gnutls --disable-ovs --disable-concheck LIBNDP_CFLAGS=-I/opt/armhf/include LIBNDP_LIBS=-L/opt/armhf/lib --without-nm-cloud-setup --disable-introspection --disable-ppp --without-nmcli
+
+make libnm/libnm.la
+make install-pkgconfigDATA install-libLTLIBRARIES DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/{bin,share}
