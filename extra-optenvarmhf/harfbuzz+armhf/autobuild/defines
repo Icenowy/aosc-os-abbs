@@ -1,0 +1,7 @@
+PKGNAME=harfbuzz+armhf
+PKGDES="OpenType text shaping engine (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="glibc+armhf glib+armhf icu+armhf freetype+armhf cairo+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
