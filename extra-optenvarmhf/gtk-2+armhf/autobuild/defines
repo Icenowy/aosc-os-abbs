@@ -1,0 +1,10 @@
+PKGNAME=gtk-2+armhf
+PKGSEC=x11
+PKGDEP="atk+armhf cairo+armhf gdk-pixbuf+armhf pango+armhf shared-mime-info"
+BUILDDEP="python-2 gcc+cross+optenvarmhf"
+PKGDES="GIMP toolkit version 2 (optenv32)"
+
+AUTOTOOLS_AFTER="--with-xinput=yes --disable-cups"
+ABSHADOW=no
+NOLTO=yes
+ABHOST=noarch
