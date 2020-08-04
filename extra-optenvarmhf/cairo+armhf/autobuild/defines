@@ -1,0 +1,7 @@
+PKGNAME=cairo+armhf
+PKGDEP="x11-lib+armhf libdrm+armhf libpng-1.6+armhf fontconfig+armhf glib+armhf pixman+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=libs
+PKGDES="A 2D graphics library with support for multiple output devices."
+
+ABHOST=noarch
