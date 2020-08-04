@@ -1,0 +1,7 @@
+PKGNAME=libusb+armhf
+PKGDES="A library used by some applications for USB device access"
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=libs
+
+ABHOST=noarch
