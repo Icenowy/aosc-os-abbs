@@ -1,0 +1,7 @@
+PKGNAME=sdl2+armhf
+PKGSEC=x11
+PKGDEP="glibc+armhf x11-lib+armhf mesa+armhf"
+BUILDDEP="alsa-lib+armhf pulseaudio+armhf gcc+cross+optenvarmhf"
+PKGDES="A library for portable low-level access to a video framebuffer, audio output, mouse, and keyboard (Version 2, for optenvarmhf)"
+
+ABHOST=noarch
