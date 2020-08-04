@@ -1,0 +1,7 @@
+PKGNAME=dbus-glib+armhf
+PKGDES="D-Bus GLib Binding (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="glib+armhf dbus+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
