@@ -1,0 +1,16 @@
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkgconfig
+
+mkdir "$SRCDIR"/build
+cd "$SRCDIR"/build
+meson "$SRCDIR" --prefix=/opt/armhf --cross-file ../autobuild/meson-cross
+ninja
+DESTDIR="$PKGDIR" ninja install
+
+cd "$SRCDIR"
+
+rm -vrf "$PKGDIR"/opt/armhf/share
+rm -v "$PKGDIR"/opt/armhf/bin/gdbus-codegen

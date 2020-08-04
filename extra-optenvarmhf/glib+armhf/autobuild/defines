@@ -1,0 +1,9 @@
+PKGNAME=glib+armhf
+PKGSEC=libs
+PKGDEP="glibc+armhf pcre+armhf libffi+armhf"
+PKGSUG="python-2"
+BUILDDEP="python-2 meson gcc+cross+optenvarmhf"
+PKGDES="Common C routines used by GTK+ and other libs (optenvarmhf)"
+
+NOLTO=yes
+ABHOST=noarch
