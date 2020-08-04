@@ -1,0 +1,6 @@
+PKGNAME=libgudev+armhf
+PKGSEC=libs
+PKGDES="GLib binding for libudev"
+PKGDEP="eudev+armhf glib+armhf"
+
+ABHOST=noarch
