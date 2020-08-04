@@ -1,0 +1,8 @@
+PKGNAME=gdk-pixbuf+armhf
+PKGDES="A toolkit for image loading and pixel buffer manipulation (optenvarmhf)"
+PKGDEP="glib+armhf libpng-1.6+armhf libtiff+armhf libjpeg-turbo+armhf"
+BUILDDEP="gcc+cross+optenvarmhf shared-mime-info"
+PKGSEC=libs
+
+NOLTO=1
+ABHOST=noarch

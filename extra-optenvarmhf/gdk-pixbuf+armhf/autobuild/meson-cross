@@ -1,0 +1,15 @@
+[binaries]
+c = '/opt/abcross/optenvarmhf/bin/arm-aosc-linux-gnueabihf-gcc'
+cpp = '/opt/abcross/optenvarmhf/bin/arm-aosc-linux-gnueabihf-g++'
+ar = '/opt/abcross/optenvarmhf/bin/arm-aosc-linux-gnueabihf-ar'
+strip = '/opt/abcross/optenvarmhf/bin/arm-aosc-linux-gnueabihf-strip'
+
+pkgconfig = '/usr/bin/pkg-config'
+
+[properties]
+
+[host_machine]
+system = 'linux'
+cpu_family = 'arm'
+cpu = 'armv7hl'
+endian = 'little'
