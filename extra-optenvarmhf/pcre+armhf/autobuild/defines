@@ -1,0 +1,7 @@
+PKGNAME=pcre+armhf
+PKGDES="Perl Compatible Regular Expression (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="zlib+armhf bzip2+armhf glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+
+ABHOST=noarch
