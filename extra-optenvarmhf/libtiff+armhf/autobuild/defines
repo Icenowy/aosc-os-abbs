@@ -1,0 +1,7 @@
+PKGNAME=libtiff+armhf
+PKGDES="Library for manipulation of TIFF images (optenvarmhf)"
+PKGSEC=libs
+PKGDEP="glibc+armhf libjpeg-turbo+armhf x11-lib+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
