@@ -1,0 +1,7 @@
+PKGNAME=atk+armhf
+PKGDEP="glib+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGDES="A library providing a set of interfaces for accessibility (optenv32)"
+PKGSEC=libs
+
+ABHOST=noarch
