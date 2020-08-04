@@ -1,0 +1,8 @@
+PKGNAME=dbus+armhf
+PKGSEC=libs
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGDES="D-Bus (libraries only, optenvarmhf)"
+
+NOLTO=1
+ABHOST=noarch

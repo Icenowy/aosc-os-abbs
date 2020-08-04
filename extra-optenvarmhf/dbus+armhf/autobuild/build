@@ -1,0 +1,20 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkgconfig:/opt/armhf/share/pkgconfig
+
+./configure --build=${ARCH_TARGET[$ARCH]} --host=arm-aosc-linux-gnueabihf --prefix=/opt/armhf --enable-shared --disable-static --sysconfdir=/etc --localstatedir=/var \
+            --libexecdir=/opt/32/lib/dbus-1.0 --with-dbus-user=dbus \
+            --with-system-pid-file=/run/dbus/pid \
+            --with-system-socket=/run/dbus/system_bus_socket \
+            --with-console-auth-dir=/run/console/ \
+            --enable-inotify --disable-dnotify \
+            --disable-verbose-mode --disable-static \
+            --disable-tests --disable-asserts \
+            --disable-systemd
+make
+make DESTDIR="$PKGDIR" -C dbus install
+make DESTDIR="$PKGDIR" install-data-am
+
+rm -rf "$PKGDIR"/opt/armhf/{bin,share}
