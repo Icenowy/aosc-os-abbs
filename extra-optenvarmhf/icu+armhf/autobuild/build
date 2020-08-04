@@ -1,0 +1,17 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+mkdir native
+cd native
+../source/configure && make ${ABMK}
+cd ..
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkgconfig:/opt/armhf/share/pkgconfig
+
+./source/configure --build=${ARCH_TARGET[$ARCH]} --host=arm-aosc-linux-gnueabihf --prefix=/opt/armhf --enable-shared --disable-static --with-cross-build=$PWD/native/
+
+make ${ABMK}
+make install DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/{bin,share}

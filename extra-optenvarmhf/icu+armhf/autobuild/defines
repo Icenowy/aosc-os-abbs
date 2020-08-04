@@ -1,0 +1,7 @@
+PKGNAME=icu+armhf
+PKGSEC=libs
+PKGDES="International Components for Unicode"
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+NOLTO=yes
+ABHOST=noarch
