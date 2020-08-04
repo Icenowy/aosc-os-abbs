@@ -1,0 +1,7 @@
+PKGNAME=pixman+armhf
+PKGDES="Pixel manipulation library for X and Cairo (optenvarmhf)"
+PKGDEP="glibc+armhf"
+BUILDDEP="gcc+cross+optenvarmhf"
+PKGSEC=libs
+
+ABHOST=noarch
