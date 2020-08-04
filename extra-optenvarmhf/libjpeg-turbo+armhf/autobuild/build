@@ -1,0 +1,11 @@
+unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+
+export PATH=/opt/abcross/optenvarmhf/bin:$PATH
+export PKG_CONFIG_LIBDIR=/opt/armhf/lib/pkg-config
+
+cmake . -DCMAKE_INSTALL_PREFIX=/opt/armhf -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_TOOLCHAIN_FILE=autobuild/armhf.cmake
+make
+make install DESTDIR="$PKGDIR"
+
+rm -rf "$PKGDIR"/opt/armhf/{bin,share}
